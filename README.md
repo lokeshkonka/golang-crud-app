@@ -1,1 +1,1 @@
-# golang-crud-app
+# golang-crud-web-app
