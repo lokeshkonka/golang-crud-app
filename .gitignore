@@ -1,0 +1,65 @@
+########################
+# Global
+########################
+.DS_Store
+*.log
+.env
+.env.*
+!.env.example
+
+########################
+# Go (Backend in root)
+########################
+# Binaries
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+
+# Air (hot reload)
+tmp/
+.air/
+
+# Build folders
+bin/
+dist/
+build/
+
+# Go build & cache
+*.out
+
+########################
+# Node (Frontend - Vite)
+########################
+client/node_modules/
+client/dist/
+client/.vite/
+client/.cache/
+
+# Vite local env
+client/.env
+client/.env.*
+
+########################
+# MongoDB (never push data)
+########################
+*.bson
+*.wt
+*.ns
+*.bak
+dump/
+data/
+mongodata/
+mongo-data/
+mongodb/
+
+########################
+# IDE/OS
+########################
+.vscode/
+.idea/
+Thumbs.db
+ehthumbs.db
+Icon?
