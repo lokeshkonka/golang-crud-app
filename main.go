@@ -12,6 +12,7 @@ import (
 	"go.mongodb.org/mongo-driver/bson/primitive"
 	"go.mongodb.org/mongo-driver/mongo"
 	"go.mongodb.org/mongo-driver/mongo/options"
+	"github.com/gofiber/fiber/v2/middleware/cors"
 )
 
 type Todo struct {
@@ -44,6 +45,7 @@ fmt.Println("Connected successfully")
 
 collection = client.Database("goland_db").Collection("todos")
 app:= fiber.New()
+app.Use(cors.New())
 app.Get("/api/todos",getTodos)
 app.Post("/api/todos",PostTodos)
 app.Patch("/api/todos/:id",PatchTodos)
